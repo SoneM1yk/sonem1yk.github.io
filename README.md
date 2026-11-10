@@ -46,8 +46,12 @@ category: 生活
 `dist/`。首次部署需要在 GitHub 仓库中设置：
 
 1. 打开 `Settings > Pages`。
-2. 在 `Build and deployment > Source` 选择 `GitHub Actions`。
-3. 推送代码到 `main`，等待 Actions 完成。
+2. 在 `Build and deployment > Source` 选择 `GitHub Actions`，不要保留
+   `Deploy from a branch`。分支模式会由 Jekyll 直接渲染 README，覆盖 Astro 的构建产物。
+3. 推送代码到 `main`，等待 `Deploy to GitHub Pages` 工作流完成。
+
+如果之前已经用分支模式发布过，切换 Source 后在 `Actions` 中重新运行
+`Deploy to GitHub Pages` 即可。
 
 站点使用用户主页仓库 `sonem1yk.github.io`，因此网址根目录为 `/`，
 `shirones/config/siteConfig.ts` 中的 `base` 应保持 `"/"`。
