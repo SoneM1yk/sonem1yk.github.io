@@ -15,6 +15,9 @@ pnpm dev
 
 打开 http://localhost:4321 查看站点。
 
+本地启动脚本会在检测到 `127.0.0.1:7890` 代理时自动使用它，以便 Astro
+下载字体资源；也可以用 `LOCAL_PROXY` 指定其他代理地址。
+
 ## 写文章
 
 文章放在 `shirones/content/posts/`，支持 Markdown 与 MDX。新建一个文件：
